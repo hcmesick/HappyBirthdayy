@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Birthday Card</title>
+  <link href="https://fonts.googleapis.com/css2?family=Mali&family=Jua&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: #fef0f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .card-container {
+      width: 600px;
+      perspective: 2000px;
+    }
+
+    .card {
+      width: 100%;
+      position: relative;
+    }
+
+    .cover {
+      width: 100%;
+      height: 550px;
+      background: url('https://i.ibb.co/RpQpMGBc/IMG-8755.jpg') center/cover no-repeat;
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 2;
+      transform-origin: left;
+      transform: rotateY(0deg);
+      transition: transform 1.2s ease-in-out;
+      border-radius: 10px;
+      border: 5px solid white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      box-sizing: border-box;
+    }
+
+    .card.open .cover {
+      transform: rotateY(-180deg);
+    }
+
+    .inside {
+      width: 100%;
+      height: 550px;
+      background: white;
+      position: relative;
+      z-index: 1;
+      border-radius: 10px;
+      padding: 20px;
+      box-sizing: border-box;
+      text-align: left;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+      overflow-y: auto;
+      font-family: 'Mali', sans-serif;
+      font-size: 20px;
+      color: #ebafab;
+    }
+
+    .inside .heart {
+      font-size: 40px;
+      color: #ffdbd9;
+      animation: beat 1s infinite;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    .inside h1 {
+      font-family: 'Jua', sans-serif;
+      font-size: 36px;
+      color: #ffdbd9;
+      margin-bottom: 20px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .inside p {
+      line-height: 1.6;
+      margin-bottom: 10px;
+      white-space: pre-line;
+    }
+
+    @keyframes beat {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+    }
+  </style>
+</head>
+<body>
+  <div class="card-container">
+    <div class="card" id="card" onclick="openCard()">
+      <div class="cover"></div>
+      <div class="inside">
+        <h1>Happy Birthday!</h1>
+        <div class="heart">♥</div>
+        <p>
+I hope I’m not too late to say this but even if I am, I’ll still say it loud  
+WAHH HAPPY 14TH BIDEUUUUUUU <33  
+There’s so much I want to tell you, but honestly, I don’t think words will ever be enough and If I tried to write everything in my heart, this message might never end lol.  
+(LONG MESSAGE AHEAD SORRY POE IF OA 😭😭)  
+✉️  
+
+I still clearly remember the time we first met—it was during lockdown. Life felt really weird asf and heavy back then. I was spending most of my days alone, slowly growing distant from my irl friends because of personal shits. I wasn’t sure how to handle things, and everything felt overwhelming for me at that time. It was easier to be online, where I didn’t have to deal with as much pressure from others ㅠㅠ.  
+
+I remember my mom would always scold me for being on my device too much LOL. She’d say things like, “Mag-aral ka muna nak, wag puro laro” 😭. But honestly? I’m glad na matigas ulo ko that time. Because if I listened to her, I probably wouldn’t have met you heh. And yk meeting you became one of the best things that happened to me during that whole time.  
+
+You were the first person who made me feel like myself and I could talk to you comfortably without pretending yk. Like, I’m not confident of opening up to people but somehow, with you, I probably ended up yapping about my whole life 💀. I probably sounded all over the place, but you still listened. You stayed. And that kind of kindness of yours really stuck with me :,).  
+
+Over time, I met a lot of people online and at school. Some stayed for a while, others disappeared. And I always wondered if maybe I was too awkward, too clingy, or too annoying. But somehow, you stayed. You’ve always been there, even in quiet ways. That means more to me than I can say heh.  
+
+You’ve comforted me in ways I didn’t even know I needed. Through simple chats, little checkinz, funny convoz, and even just being around. You made me feel like I was enough—that just being me was okay. And not many people made me feel that way before.  
+
+And of course, I’ll never forget all the things we used to do together like playing games almost 24/7😭, defending each other, gossiping about stuff, and just having fun. I’m really happy that even now, we still get to do things together, like watching/waiting for comebacks, screaming over updates, fangirling over our faves, and getting to watch enha together 🥹.  
+
+I also want to say this, even if it’s kinda awkward to bring it up  
+I’ve always felt a little sorry for the time I confessed to you AHH. Back then, I didn’t really understand my own feelings. I just knew I cared about you deeply. I couldn’t tell the difference between liking someone romantically or loving someone platonically. But now I do. And I know what I felt was the kind of love you have for someone who made a real place in your heart. You were a friend I truly, truly treasured and still do.  
+
+Sometimes I still ask myself how our friendship lasted this long. And then I remember—it’s because you stayed too. Even when things were quiet. Even when we both get busy. Even when we changed.  
+
+Now you’re 14. And it’s not just something to celebrate because you’re a year older—it’s something to be thankful for, because someone like you is in this world. Someone kindhearted, trustworthy, loyal, and supportive. Someone I’m lucky to know frfr >:,))).  
+
+Lastly, I just want to say that I’m really, really proud of you. You’ve come so far!! I hope today, you feel so loved. I hope you know how much you matter. And I hope you keep being the amazing person that you are. GOD BLESS!  
+ILYSM. HAPPY BIRTHDAY AGAIN <33.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function openCard() {
+      document.getElementById("card").classList.toggle("open");
+    }
+  </script>
+</body>
+</html>
